@@ -29,10 +29,10 @@ import React, { Component } from 'react';
          <div className="total-time">{this.props.formatDuration}</div>
        </section>
        <section id="volume-control">
-         <div className="icon ion-volume-low">{this.props.currentVolume}</div>
+         <div className="icon ion-volume-low">{this.props.volume}</div>
          <input type="range"
             className="seek-bar"
-            value={(this.props.currentVolume) || 0}
+            value={(this.props.volume) || 0}
             max="1"
             min="0"
             step="0.1"
