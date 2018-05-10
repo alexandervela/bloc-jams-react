@@ -1,28 +1,64 @@
 .App {
   text-align: center;
-}
-
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 80px;
+  background-image: url("concert_image.jpg");
 }
 
 .App-header {
-  background-color: #222;
   height: 150px;
   padding: 20px;
-  color: white;
 }
 
-.App-title {
-  font-size: 1.5em;
+.Nav-bar {
+  color: hotpink;
+  font-size: 25px;
+  padding: 50px;
+  text-decoration: none;
 }
 
-.App-intro {
-  font-size: large;
+.Nav-bar:hover {
+  color: blue;
 }
 
-@keyframes App-logo-spin {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
+.landing {
+  color: hotpink;
+}
+
+.hero-title {
+  font-size: 60px;
+}
+
+.point {
+  padding: 15px;
+  font-size: 35px;
+}
+
+.point-title {
+  padding: 10px;
+  font-size: 45px;
+}
+
+.album-link {
+  color: hotpink;
+  font-size: 20px;
+}
+
+.album-link:hover {
+  color: blue;
+}
+
+.album-details {
+  color: hotpink;
+  font-size: 30px;
+}
+
+.song {
+  color: hotpink;
+  font-size: 20px;
+}
+
+.player-bar {
+  color: hotpink;
+  position: fixed;
+  top: 2%;
+  right: 15%;
 }
