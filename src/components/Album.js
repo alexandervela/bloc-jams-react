@@ -5,11 +5,9 @@ import PlayerBar from './PlayerBar';
 class Album extends Component {
   constructor(props) {
      super(props);
-
      const album = albumData.find( album => {
        return album.slug === this.props.match.params.slug
      });
-
      this.state = {
        album: album,
        currentSong: album.songs[0],
@@ -61,6 +59,16 @@ class Album extends Component {
    setSong(song) {
      this.audioElement.src = song.audioSrc;
      this.setState({ currentSong: song });
+   }
+
+   returnSong(song) {
+     if (this.state.currentSong === song){
+       if (this.state.isPlaying){
+         return 'song playing';
+       } else {
+         return 'song paused';
+       }
+     } return 'song';
    }
 
    handleSongClick(song) {
@@ -134,7 +142,7 @@ class Album extends Component {
            <tbody>
             {
               this.state.album.songs.map( (song, index) =>
-                <tr className="song" key={index} onClick={() => this.handleSongClick(song)} >
+                <tr className={this.returnSong(song)} key={index} onClick={() => this.handleSongClick(song)} >
                  <td className="song-actions">
                    <button>
                      <span className="song-number">{index+1}</span>
@@ -150,7 +158,7 @@ class Album extends Component {
            </tbody>
          </table>
          <PlayerBar
-         isPlaying={this.state.isPlaying}
+           isPlaying={this.state.isPlaying}
            currentSong={this.state.currentSong}
            currentTime={this.audioElement.currentTime}
            duration={this.audioElement.duration}

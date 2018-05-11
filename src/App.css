@@ -1,6 +1,6 @@
 .App {
-  text-align: center;
   background-image: url("concert_image.jpg");
+  text-align: center;
 }
 
 .App-header {
@@ -9,9 +9,13 @@
 }
 
 .Nav-bar {
+  background-color: black;
+  border: 1px solid;
+  border-radius: 10px;
   color: hotpink;
   font-size: 25px;
-  padding: 50px;
+  margin: 40px;
+  padding: 10px;
   text-decoration: none;
 }
 
@@ -28,7 +32,7 @@
 }
 
 .point {
-  padding: 15px;
+  padding: 10px;
   font-size: 35px;
 }
 
@@ -39,7 +43,8 @@
 
 .album-link {
   color: hotpink;
-  font-size: 20px;
+  font-size: 25px;
+  text-align: center;
 }
 
 .album-link:hover {
@@ -59,6 +64,49 @@
 .player-bar {
   color: hotpink;
   position: fixed;
-  top: 2%;
+  top: 50%;
   right: 15%;
+}
+
+#previous {
+  background-color: hotpink;
+}
+
+#next {
+  background-color: hotpink;
+}
+
+#play-pause {
+  background-color: hotpink;
+}
+
+.song .ion-play,
+.song .ion-pause {
+  display: none;
+}
+
+.song:hover .ion-play {
+  display: block;
+}
+
+.song:hover .song-number {
+  display: none;
+}
+
+.song.playing .ion-pause {
+  display: block;
+}
+
+.song.playing .song-number,
+.song.playing .ion-play {
+  display: none;
+}
+
+.song.paused .ion-play {
+  display: block;
+}
+
+.song.paused .song-number,
+.song.paused .ion-pause {
+  display: none;
 }
